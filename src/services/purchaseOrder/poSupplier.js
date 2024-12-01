@@ -2,7 +2,9 @@ import axios from "axios";
 
 export const fetchSuppliers = async () => {
   try {
-    const response = await axios.get("/api/v2/suppliers");
+    const response = await axios.get(
+      "https://pms-backend-host.onrender.com/api/v2/suppliers"
+    );
     return response.data.data;
   } catch (error) {
     console.error("Error fetching suppliers:", error);
@@ -12,7 +14,10 @@ export const fetchSuppliers = async () => {
 
 export const createSupplier = async (supplierData) => {
   try {
-    const response = await axios.post("/api/v2/suppliers", supplierData);
+    const response = await axios.post(
+      "https://pms-backend-host.onrender.com/api/v2/suppliers",
+      supplierData
+    );
     return {
       success: true,
       data: response.data,
