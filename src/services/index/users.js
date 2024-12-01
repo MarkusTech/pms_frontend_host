@@ -2,11 +2,14 @@ import axios from "axios";
 
 export const signup = async ({ name, email, password }) => {
   try {
-    const { data } = await axios.post("/api/users/register", {
-      name,
-      email,
-      password,
-    });
+    const { data } = await axios.post(
+      "https://pms-backend-host.onrender.com/api/users/register",
+      {
+        name,
+        email,
+        password,
+      }
+    );
     return data;
   } catch (error) {
     // console.log(error.response.data);
@@ -19,10 +22,13 @@ export const signup = async ({ name, email, password }) => {
 export const login = async ({ email, password }) => {
   try {
     // const { data } = await axios.post("http://localhost:5000/api/users/login", {
-    const { data } = await axios.post("/api/v1/login", {
-      email,
-      password,
-    });
+    const { data } = await axios.post(
+      "https://pms-backend-host.onrender.com/api/v1/login",
+      {
+        email,
+        password,
+      }
+    );
     return data;
   } catch (error) {
     // console.log(error.response.data);
@@ -41,7 +47,10 @@ export const getUserProfile = async ({ token }) => {
       },
       mode: "cors",
     };
-    const { data } = await axios.get("/api/users/profile", config);
+    const { data } = await axios.get(
+      "https://pms-backend-host.onrender.com/api/users/profile",
+      config
+    );
     return data;
   } catch (error) {
     if (error.response && error.response.data.message)
@@ -59,7 +68,7 @@ export const updateProfile = async ({ token, userData }) => {
     };
 
     const { data } = await axios.put(
-      "/api/users/updateProfile",
+      "https://pms-backend-host.onrender.com/api/users/updateProfile",
       userData,
       config
     );
@@ -81,7 +90,7 @@ export const updateProfilePicture = async ({ token, formData }) => {
     };
 
     const { data } = await axios.put(
-      "/api/users/updateProfilePicture",
+      "https://pms-backend-host.onrender.com/api/users/updateProfilePicture",
       formData,
       config
     );
