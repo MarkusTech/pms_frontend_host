@@ -27,7 +27,7 @@ const PaymentTypeCreateForm = ({ onPaymentTypeCreated, closeForm }) => {
     try {
       // Replace with your actual API endpoint
       const response = await axios.post(
-        "/api/v3/transaction/payment-types",
+        "https://pms-backend-host.onrender.com/api/v3/transaction/payment-types",
         formData
       );
 

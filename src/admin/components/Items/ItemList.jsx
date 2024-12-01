@@ -91,7 +91,10 @@ const ItemList = () => {
       <td>
         {item.image_url && (
           <img
-            src={`/${item.image_url.replace(/\\/g, "/")}`}
+            src={`https://pms-backend-host.onrender.com/${item.image_url.replace(
+              /\\/g,
+              "/"
+            )}`}
             alt="Item"
             style={{ width: "50px", height: "50px", borderRadius: "50%" }}
           />

@@ -28,7 +28,9 @@ const PaymentTypeList = () => {
   const loadPaymentTypes = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/api/v3/transaction/payment-types");
+      const response = await axios.get(
+        "https://pms-backend-host.onrender.com/api/v3/transaction/payment-types"
+      );
       setPaymentTypes(response.data.data);
     } catch (error) {
       setError(error.message);

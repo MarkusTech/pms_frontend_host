@@ -29,7 +29,7 @@ const TransactionTypeCreateForm = ({ onTransactionTypeCreated, closeForm }) => {
     try {
       // Replace with your actual API endpoint
       const response = await axios.post(
-        "/api/v3/transaction/transaction-types",
+        "https://pms-backend-host.onrender.com/api/v3/transaction/transaction-types",
         formData
       );
 

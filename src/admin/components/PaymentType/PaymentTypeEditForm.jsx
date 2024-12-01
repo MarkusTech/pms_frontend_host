@@ -21,7 +21,7 @@ const PaymentTypeEditForm = ({
     const loadPaymentType = async () => {
       try {
         const response = await axios.get(
-          `/api/v3/transaction/payment-types/${paymentTypeID}`
+          `https://pms-backend-host.onrender.com/api/v3/transaction/payment-types/${paymentTypeID}`
         );
         if (response.data.success) {
           setFormData({
@@ -56,7 +56,7 @@ const PaymentTypeEditForm = ({
     e.preventDefault();
     try {
       const response = await axios.put(
-        `/api/v3/transaction/payment-types/${paymentTypeID}`,
+        `https://pms-backend-host.onrender.com/api/v3/transaction/payment-types/${paymentTypeID}`,
         formData
       );
       if (response.data.success) {

@@ -22,7 +22,7 @@ const CompanyProfileCreateForm = () => {
   // Fetch the company profile when the component mounts
   useEffect(() => {
     axios
-      .get("/api/v2/company-profile")
+      .get("https://pms-backend-host.onrender.com/api/v2/company-profile")
       .then((response) => {
         if (response.data.success && response.data.data) {
           const data = response.data.data;
@@ -80,18 +80,26 @@ const CompanyProfileCreateForm = () => {
     try {
       let response;
       if (isEditMode) {
-        response = await axios.put("/api/v2/company-profile", formDataToSend, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
+        response = await axios.put(
+          "https://pms-backend-host.onrender.com/api/v2/company-profile",
+          formDataToSend,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
       } else {
         // If it's a new profile, send a POST request
-        response = await axios.post("/api/v2/company-profile", formDataToSend, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
+        response = await axios.post(
+          "https://pms-backend-host.onrender.com/api/v2/company-profile",
+          formDataToSend,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
       }
 
       if (response.data.success) {

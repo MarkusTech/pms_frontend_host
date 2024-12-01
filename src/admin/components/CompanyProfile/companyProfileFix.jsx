@@ -51,7 +51,7 @@ const CompanyProfileCreateForm = () => {
 
     try {
       const response = await axios.post(
-        "/api/v2/company-profile",
+        "https://pms-backend-host.onrender.com/api/v2/company-profile",
         formDataToSend,
         {
           headers: {

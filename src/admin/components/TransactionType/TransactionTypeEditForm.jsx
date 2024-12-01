@@ -19,7 +19,7 @@ const TransactionTypeEditForm = ({
     const loadTransactionType = async () => {
       try {
         const response = await axios.get(
-          `/api/v3/transaction/transaction-types/${transactionTypeID}`
+          `https://pms-backend-host.onrender.com/api/v3/transaction/transaction-types/${transactionTypeID}`
         );
         if (response.data.success) {
           const { transactionName, description } = response.data.data;
@@ -52,7 +52,7 @@ const TransactionTypeEditForm = ({
     e.preventDefault();
     try {
       const response = await axios.put(
-        `/api/v3/transaction/transaction-types/${transactionTypeID}`,
+        `https://pms-backend-host.onrender.com/api/v3/transaction/transaction-types/${transactionTypeID}`,
         formData
       );
       if (response.data.success) {
