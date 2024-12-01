@@ -20,7 +20,7 @@ const Sidebar = ({ isClosed }) => {
       title: "Sales",
       icon: "bx bx-line-chart",
       link: "/sales",
-      allowedRoles: [1, 2],
+      allowedRoles: [1, 2, 3],
     },
     // {
     //   title: "Reports",
@@ -32,7 +32,7 @@ const Sidebar = ({ isClosed }) => {
       title: "Items",
       icon: "bx bx-analyse",
       link: "/items",
-      allowedRoles: [1, 2],
+      allowedRoles: [1, 2, 3],
     },
     {
       title: "Inventory",
@@ -44,79 +44,79 @@ const Sidebar = ({ isClosed }) => {
       title: "Inventory Adjustment",
       icon: "bx bxs-edit",
       link: "/inventory-adjustment",
-      allowedRoles: [1, 2],
+      allowedRoles: [1, 2, 3],
     },
     {
       title: "Inventory Type",
       icon: "bx bxs-box",
       link: "/inventory-type",
-      allowedRoles: [1, 2],
+      allowedRoles: [1, 2, 3],
     },
     {
       title: "Adjustment Reason",
       icon: "bx bxs-info-circle",
       link: "/adjustment-type-reason",
-      allowedRoles: [1, 2],
+      allowedRoles: [1, 2, 3],
     },
     {
       title: "Purchase Order",
       icon: "bx bxs-shopping-bag",
       link: "/purchase-order",
-      allowedRoles: [1, 2],
+      allowedRoles: [1, 2, 3],
     },
     {
       title: "Categories",
       icon: "bx bx-message-square-dots",
       link: "/categories",
-      allowedRoles: [1, 2],
+      allowedRoles: [1, 2, 3],
     },
     {
       title: "Supplier",
       icon: "bx bxs-user",
       link: "/supplier",
-      allowedRoles: [1, 2],
+      allowedRoles: [1, 2, 3],
     },
     {
       title: "Location",
       icon: "bx bxs-map",
       link: "/location",
-      allowedRoles: [1, 2],
+      allowedRoles: [1, 2, 3],
     },
     {
       title: "Payment Type",
       icon: "bx bxs-credit-card",
       link: "/payment-type",
-      allowedRoles: [1, 2], // Define roles allowed for Payment Type
+      allowedRoles: [1, 2, 3], // Define roles allowed for Payment Type
     },
     {
       title: "Transaction Type",
       icon: "bx bx-transfer", // New icon
       link: "/transaction-type",
-      allowedRoles: [1, 2], // Define roles allowed for Transaction Type
+      allowedRoles: [1, 2, 3], // Define roles allowed for Transaction Type
     },
     {
       title: "Customer",
       icon: "bx bxs-user-check",
       link: "/customer",
-      allowedRoles: [1, 2],
+      allowedRoles: [1, 2, 3],
     },
     {
       title: "Customer Type",
       icon: "bx bx-list-ul",
       link: "/customer-type",
-      allowedRoles: [1], // Only role 1 allowed
+      allowedRoles: [1, 2], // Only role 1 allowed
     },
     {
       title: "Company Profile",
       icon: "bx bxs-buildings",
       link: "/company-profile",
-      allowedRoles: [1],
+      allowedRoles: [1, 2],
     },
     {
       title: "Users",
       icon: "bx bx-group",
       link: "/users",
-      allowedRoles: [1],
+      allowedRoles: [1, 2],
     },
   ];
 
