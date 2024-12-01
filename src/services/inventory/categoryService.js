@@ -2,7 +2,9 @@ import axios from "axios";
 
 export const fetchCategories = async () => {
   try {
-    const response = await axios.get("/api/v1/categories");
+    const response = await axios.get(
+      "https://pms-backend-host.onrender.com/api/v1/categories"
+    );
     return response.data.data;
   } catch (error) {
     console.error("Error fetching categories:", error);
@@ -12,7 +14,10 @@ export const fetchCategories = async () => {
 
 export const createCategory = async (categoryData) => {
   try {
-    const response = await axios.post("/api/v1/categories", categoryData);
+    const response = await axios.post(
+      "https://pms-backend-host.onrender.com/api/v1/categories",
+      categoryData
+    );
     return {
       success: true,
       data: response.data,
@@ -26,13 +31,15 @@ export const createCategory = async (categoryData) => {
 };
 
 export const fetchCategoryById = async (categoryID) => {
-  const response = await axios.get(`/api/v1/categories/${categoryID}`);
+  const response = await axios.get(
+    `https://pms-backend-host.onrender.com/api/v1/categories/${categoryID}`
+  );
   return response.data;
 };
 
 export const updateCategory = async (categoryID, updatedData) => {
   const response = await axios.put(
-    `/api/v1/categories/${categoryID}`,
+    `https://pms-backend-host.onrender.com/api/v1/categories/${categoryID}`,
     updatedData
   );
   return response.data;

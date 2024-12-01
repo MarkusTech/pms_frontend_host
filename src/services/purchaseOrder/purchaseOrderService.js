@@ -2,7 +2,9 @@ import axios from "axios";
 
 export const fetchPurchaseOrders = async () => {
   try {
-    const response = await axios.get("/api/v2/purchase-orders");
+    const response = await axios.get(
+      "https://pms-backend-host.onrender.com/api/v2/purchase-orders"
+    );
     return response.data.data;
   } catch (error) {
     console.error("Error fetching purchase orders:", error);
@@ -17,7 +19,7 @@ export const fetchPurchaseOrders = async () => {
 export const createPurchaseOrderAndItems = async (purchaseOrderData) => {
   try {
     const response = await axios.post(
-      `/api/v2/po/purchase-order-items`,
+      `https://pms-backend-host.onrender.com/api/v2/po/purchase-order-items`,
       purchaseOrderData
     );
     return {
@@ -34,7 +36,9 @@ export const createPurchaseOrderAndItems = async (purchaseOrderData) => {
 
 export const fetchSuppliers = async () => {
   try {
-    const response = await axios.get("/api/v2/suppliers");
+    const response = await axios.get(
+      "https://pms-backend-host.onrender.com/api/v2/suppliers"
+    );
     return response.data.data;
   } catch (error) {
     console.error("Error fetching suppliers:", error);
@@ -45,7 +49,9 @@ export const fetchSuppliers = async () => {
 // Fetch all locations
 export const fetchLocations = async () => {
   try {
-    const response = await axios.get("/api/v1/locations");
+    const response = await axios.get(
+      "https://pms-backend-host.onrender.com/api/v1/locations"
+    );
     return response.data.data;
   } catch (error) {
     console.error("Error fetching locations:", error);

@@ -1,9 +1,12 @@
 import axios from "axios";
 
-const API_URL = "/api/v1/inventory-adjustment";
-const INVENTORY_URL = "/api/v1/inventory";
-const ADJUSTMENT_TYPE_URL = "/api/v1/adjustment-type";
-const ADJUSTMENT_REASON_URL = "/api/v1/adjustment-reason";
+const API_URL =
+  "https://pms-backend-host.onrender.com/api/v1/inventory-adjustment";
+const INVENTORY_URL = "https://pms-backend-host.onrender.com/api/v1/inventory";
+const ADJUSTMENT_TYPE_URL =
+  "https://pms-backend-host.onrender.com/api/v1/adjustment-type";
+const ADJUSTMENT_REASON_URL =
+  "https://pms-backend-host.onrender.com/api/v1/adjustment-reason";
 
 export const fetchInventoryAdjustments = async () => {
   try {
@@ -28,7 +31,7 @@ export const fetchInventoryAdjustmentById = async (id) => {
 export const createInventoryAdjustment = async (adjustmentData) => {
   try {
     const response = await axios.post(
-      "/api/v1/inventory-adjustment",
+      "https://pms-backend-host.onrender.com/api/v1/inventory-adjustment",
       adjustmentData
     );
     return response.data;
@@ -79,7 +82,8 @@ export const fetchAdjustmentReasons = async () => {
   }
 };
 
-const API_BASE_URL = "http://localhost:5000/api/v1/inventory-adjustment";
+const API_BASE_URL =
+  "https://pms-backend-host.onrender.com/api/v1/inventory-adjustment";
 
 // Approve inventory adjustment
 export const approveInventoryAdjustment = async (inventoryID, adjustmentID) => {

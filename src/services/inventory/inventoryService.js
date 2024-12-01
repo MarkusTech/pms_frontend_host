@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_URL = "/api/v1/inventory";
-const API_BASE_URL = "/api/v1";
+const API_URL = "https://pms-backend-host.onrender.com/api/v1/inventory";
+const API_BASE_URL = "https://pms-backend-host.onrender.com/api/v1";
 
 export const fetchInventories = async (filters) => {
   try {

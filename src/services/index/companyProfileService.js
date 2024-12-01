@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/v2/company-profile";
+const API_URL = "https://pms-backend-host.onrender.com/api/v2/company-profile";
 
 // Create a new company profile
 export const createCompanyProfile = async (formData) => {

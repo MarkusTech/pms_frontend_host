@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/v1/locations";
+const API_URL = "https://pms-backend-host.onrender.com/api/v1/locations";
 
 // Fetch all locations
 export const fetchLocations = async () => {

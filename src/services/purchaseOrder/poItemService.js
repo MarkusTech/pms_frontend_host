@@ -2,7 +2,9 @@ import axios from "axios";
 
 export const fetchPurchaseOrderItems = async () => {
   try {
-    const response = await axios.get("/api/v2/purchase-order-items");
+    const response = await axios.get(
+      "https://pms-backend-host.onrender.com/api/v2/purchase-order-items"
+    );
     return response.data.data;
   } catch (error) {
     console.error("Error fetching purchase order items:", error);
@@ -13,7 +15,7 @@ export const fetchPurchaseOrderItems = async () => {
 export const createPurchaseOrderItem = async (purchaseOrderItemData) => {
   try {
     const response = await axios.post(
-      "/api/v2/purchase-order-items",
+      "https://pms-backend-host.onrender.com/api/v2/purchase-order-items",
       purchaseOrderItemData
     );
     return {

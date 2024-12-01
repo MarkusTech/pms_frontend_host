@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "/api/v1/adjustment-reason";
+const API_URL =
+  "https://pms-backend-host.onrender.com/api/v1/adjustment-reason";
 
 // Fetch all adjustment reasons
 export const fetchAdjustmentReasons = async () => {
