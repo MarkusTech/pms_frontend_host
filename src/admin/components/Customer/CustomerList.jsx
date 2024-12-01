@@ -29,7 +29,9 @@ const CustomerList = () => {
   const loadCustomers = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/api/v2/customers");
+      const response = await axios.get(
+        "https://pms-backend-host.onrender.com/api/v2/customers"
+      );
       setCustomers(response.data.data);
     } catch (error) {
       setError(error.message);

@@ -33,7 +33,9 @@ const CustomerCreateForm = ({ onCustomerCreated, closeForm }) => {
   useEffect(() => {
     const fetchCustomerTypes = async () => {
       try {
-        const response = await axios.get("/api/v2/customer-types");
+        const response = await axios.get(
+          "https://pms-backend-host.onrender.com/api/v2/customer-types"
+        );
         if (response.data.success) {
           setCustomerTypes(response.data.data);
         } else {
@@ -60,7 +62,10 @@ const CustomerCreateForm = ({ onCustomerCreated, closeForm }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/api/v2/customers", formData);
+      const response = await axios.post(
+        "https://pms-backend-host.onrender.com/api/v2/customers",
+        formData
+      );
 
       if (response.data.success) {
         Swal.fire({

@@ -34,7 +34,9 @@ const CustomerEditForm = ({ customerID, onClose, onCustomerUpdated }) => {
   useEffect(() => {
     const loadCustomer = async () => {
       try {
-        const response = await axios.get(`/api/v2/customers/${customerID}`);
+        const response = await axios.get(
+          `https://pms-backend-host.onrender.com/api/v2/customers/${customerID}`
+        );
         if (response.data.success) {
           setFormData(response.data.data); // Pre-fill the form with customer data
         } else {
@@ -52,7 +54,9 @@ const CustomerEditForm = ({ customerID, onClose, onCustomerUpdated }) => {
   useEffect(() => {
     const fetchCustomerTypes = async () => {
       try {
-        const response = await axios.get("/api/v2/customer-types");
+        const response = await axios.get(
+          "https://pms-backend-host.onrender.com/api/v2/customer-types"
+        );
         if (response.data.success) {
           setCustomerTypes(response.data.data);
         } else {
